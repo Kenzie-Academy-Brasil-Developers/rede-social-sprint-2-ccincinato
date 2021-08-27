@@ -14,38 +14,147 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 **** PÁGINA INICIAL
 */
 
+/* RESET */
+body,
+h1,h2,h3,h4,ul,ol,li,
+figure,figcaption,div,img,figure,footer,p{
+  margin: 0;
+  border:0;
+  padding:0;
+  list-style: none;
+}
+
 /* VARIÁVEIS */
 :root{
   
 }
+/* HTML */
+html{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 /*BODY*/
 body{
+	font-family: Helvetica, sans-serif;
+	width: 935px;
 
 }
 
 /*TOPO*/
 header{
+	display: flex;
+	justify-content: flex-start;
 	
 }
 
 /*RODAPÉ*/
 footer{
+	align-items: center;
+
+}
+
+footer nav{
+	align-items: center;
 
 }
 
 /*PÁGINA INICIAL*/
 main{
+
 	
 }
 	main .profile-content{
-
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-end;
+		align-items: flex-start;
+		align-content: flex-start;
 	}
 
-	main .highlighted-stories{
+	.profile-data{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: baseline;
+		align-content: flex-start;
+	}
 
+	main .profile-info{
+		padding-left: 50px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: stretch;
+		align-content: space-around;
+	}
+
+	.profile-info :nth-child(2){
+		order: 4;
+	}
+
+	.highlighted-stories{
+		padding-top: 70px;
+		padding-bottom: 30px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	main .highlighted-stories figure img{
+		margin: 20px;
+		width: 77px;
+		height: 77px;
+		border: white 1px solid;
+		border-radius: 100%;
+	}
+
+
+	main .highlighted-stories ul{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		align-items: baseline;
+		align-content: space-around;
 	}
 
 	main .profile-posts{
+		border-top: 1px grey solid;
+	}
 
+	main .profile-posts__nav {
+		text-align: center;
+	}
+
+	main .profile-posts__image{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		align-content: space-between;
+	}
+
+	main .profile-posts__image figure img{
+		width: 293px;
+		height: 293px;
+	}
+
+	main .profile-photo img{
+		border: white 1px solid;
+		border-radius: 100%;
+	}
+
+
+	@media (max-width:360px) {	
+		header{
+			width: 100%;
+		}
+		
 	}
